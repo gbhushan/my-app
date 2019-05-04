@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 // import WorkTimeline from '../components/WorkTimeline';
 
@@ -6,12 +7,23 @@ import Counter from '../components/Counter/';
 
 import { Layout, Menu, Icon } from 'antd';
 
+import {incrementCounter, decrementCounter} from '../actions/counterActions/';
+
 const {
   Header, Content, Footer, Sider,
 } = Layout;
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onIncrement: (event) => dispatch(incrementCounter()),
+    onDecrement: (event) => dispatch(decrementCounter())
+  }
+}
+
 class App extends Component {
   render() {
+    // const action = type => this.props.store.dispatch({type});
+    const { onIncrement, onDecrement } = this.props;
   return (
     <Layout>
     <Sider
@@ -43,7 +55,7 @@ class App extends Component {
     <Layout>
       <Header style={{ background: '#fff', padding: 0 }} />
       <Content style={{ margin: '24px 16px 0' }}>
-        <Counter />
+        <Counter onIncrement={onIncrement} onDecrement={onDecrement} />
         {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
           {/* content */}
         {/* </div> */}
@@ -57,4 +69,4 @@ class App extends Component {
 }
 }
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

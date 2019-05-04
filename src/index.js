@@ -21,7 +21,6 @@ const store = createStore(
   applyMiddleware(sagaMiddleware)
 );
 sagaMiddleware.run(helloSaga);
-const action = type => store.dispatch({type});
 
 ReactDOM.render(
 <Provider store={store}>
