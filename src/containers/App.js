@@ -27,10 +27,10 @@ class App extends Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/">About me</Link>
                 </li>
                 <li>
-                  <Link to="/about">Counter</Link>
+                  <Link to="/playground">Counter</Link>
                 </li>
                 <li>
                   <Link to="/topics">Topics</Link>
@@ -39,12 +39,12 @@ class App extends Component {
             </nav>
           </Sider>
           <Layout>
-            <Header>Header</Header>
-            <Content>
+            <Header style={{ background: '#fff'}}>Header</Header>
+            <Content style={{marginLeft: '50px'}}>
               <Switch>
                 <Route exact path="/" component={WorkTimeline} />
                 <Route
-                  path="/about"
+                  path="/playground"
                   render={props => (
                     <Counter
                       onDecrement={onDecrement}
@@ -54,7 +54,7 @@ class App extends Component {
                 />
               </Switch>
             </Content>
-            <Footer>Footer</Footer>
+            {/* <Footer>Footer</Footer> */}
           </Layout>
         </Layout>
       </Router>
