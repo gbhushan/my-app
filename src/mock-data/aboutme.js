@@ -1,3 +1,5 @@
+// add - what i'm watching, what i'm reading, what i'm studying, what i'm practicing
+
 export const aboutme = {
   name: "Gaurav Bhushan",
   age: "",

@@ -1,4 +1,8 @@
+- do i really need antd?
 - need to add sass preprocessor
 - ~~need a prettier~~ : added
 - ~~need router~~: react-router-dom
--
+- create a login experience ? - have username and password ( and encrypt password)
+- time range search
+- gh-pages: https://levelup.gitconnected.com/deploying-a-create-react-app-with-routing-to-github-pages-f386b6ce84c2
+- theming?
