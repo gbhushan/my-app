@@ -7,6 +7,7 @@ import WorkTimeline from "../components/WorkTimeline";
 import AboutMe from "../containers/about-me";
 import LandingSite from "../containers/landing-site/";
 import Counter from "../components/Counter/";
+import ImageViewer from '../containers/image-viewer/';
 
 import { incrementCounter, decrementCounter } from "../actions/counterActions/";
 
@@ -28,9 +29,6 @@ class App extends Component {
           <Sider>
             <nav>
               <ul>
-              {/* <li> */}
-                  {/* <Link to="/">About me</Link> */}
-                {/* </li> */}
                 <li>
                   <Link to="/about-me">About me</Link>
                 </li>
@@ -39,6 +37,9 @@ class App extends Component {
                 </li>
                 <li>
                   <Link to="/topics">Topics</Link>
+                </li>
+                <li>
+                  <Link to="/image-viewer">View Images</Link>
                 </li>
               </ul>
             </nav>
@@ -49,6 +50,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={LandingSite} />
                 <Route exact path="/about-me" component={AboutMe} />
+                <Route exact path="/image-viewer" component={ImageViewer} />
                 <Route
                   path="/playground"
                   render={props => (

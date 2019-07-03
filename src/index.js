@@ -7,17 +7,17 @@ import 'antd/dist/antd.css';
 
 import {Provider} from 'react-redux';
 
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 // import saga
 import {helloSaga} from './sagas/saga';
 
 // import reducer
-import counter from './reducers/reducers';
+import {counter, imagesManager} from './reducers/reducers';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
-  counter,
+  combineReducers({counter, imagesManager}),
   applyMiddleware(sagaMiddleware)
 );
 sagaMiddleware.run(helloSaga);
