@@ -1,3 +1,8 @@
+References to use -
+https://enhancv.com/
+https://www.cakeresume.com/Engineering-resume-samples
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
